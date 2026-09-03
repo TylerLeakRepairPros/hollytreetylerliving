@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollytree Tyler Living | Luxury Pool & Architectural Hydrology Portal</title>
+    <meta name="description" content="An editorial publication dedicated to pool maintenance, subterranean plumbing preservation, and luxury outdoor living in Hollytree and Stonebridge, Tyler TX.">
+    
+    <!-- Bespoke Modern Typography: Cormorant Garamond (Editorial Serif) + Synergy Sans (Inter) + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --------------------------------------------------
+           THEME & COLOR SYSTEM: Imperial Emerald & Aquamarine Slate
+           Unique Palette: Rich Deep Forest/Emerald (#06231E), Luminous Aquamarine (#2BD0AC),
+           Warm Alabaster (#F4F7F5), Golden Brass Accent (#D4A359), Dark Cyan Surface (#0C342E)
+           -------------------------------------------------- */
+        :root {
+            --bg-deep: #06231E;
+            --bg-surface: #0C342E;
+            --bg-card: rgba(12, 52, 46, 0.7);
+            --bg-light: #F4F7F5;
+
+            --accent-aqua: #2BD0AC;
+            --accent-aqua-glow: rgba(43, 208, 172, 0.25);
+            --accent-gold: #D4A359;
+            --accent-teal: #147B6F;
+
+            --text-heading: #F4F7F5;
+            --text-body: #B0C4C0;
+            --text-dark: #0A1B18;
+            --text-muted: #6E8E88;
+
+            --border-aqua: rgba(43, 208, 172, 0.3);
+            --border-glass: rgba(244, 247, 245, 0.08);
+
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.35);
+            --shadow-glow: 0 0 25px rgba(43, 208, 172, 0.15);
+            --transition-swift: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-body);
+            font-family: var(--font-sans);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(43, 208, 172, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(212, 163, 89, 0.04) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        ::selection {
+            background: var(--accent-aqua);
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--text-heading);
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .editorial-badge {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-aqua);
+            background: rgba(43, 208, 172, 0.08);
+            border: 1px solid var(--border-aqua);
+            padding: 0.35rem 0.85rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+        }
+
+        .custom-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent-aqua) 0%, var(--accent-gold) 50%, transparent 100%);
+            margin: 3.5rem 0;
+            opacity: 0.4;
+        }
+
+        /* --------------------------------------------------
+           SECTION 1: STICKY NAVIGATION BAR
+           -------------------------------------------------- */
+        .header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(6, 35, 30, 0.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: var(--transition-swift);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 85px;
+        }
+
+        .brand-identity {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .brand-emerald-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent-aqua);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-aqua);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-item-link {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--text-body);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: var(--transition-swift);
+        }
+
+        .nav-item-link:hover {
+            color: var(--accent-aqua);
+        }
+
+        .nav-action-btn {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dark);
+            background: var(--accent-aqua);
+            padding: 0.75rem 1.6rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: var(--transition-swift);
+            box-shadow: 0 4px 15px var(--accent-aqua-glow);
+        }
+
+        .nav-action-btn:hover {
+            background: #39e3be;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(43, 208, 172, 0.35);
+        }
+
+        /* --------------------------------------------------
+           SECTION 2: DYNAMIC HERO SECTION
+           -------------------------------------------------- */
+        .hero-banner {
+            padding-top: 170px;
+            padding-bottom: 6rem;
+            position: relative;
+        }
+
+        .hero-asym-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 4.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+
+        .hero-title span {
+            font-style: italic;
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-body);
+            margin-bottom: 2.5rem;
+            max-width: 620px;
+            font-weight: 300;
+        }
+
+        .hero-display-card {
+            position: relative;
+            border: 1px solid var(--border-aqua);
+            padding: 1rem;
+            background: var(--bg-surface);
+            box-shadow: var(--shadow-float);
+        }
+
+        .hero-display-img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(95%) contrast(105%);
+        }
+
+        .hero-card-tag {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--accent-gold);
+            color: var(--text-dark);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.8rem 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* --------------------------------------------------
+           SECTION 3: QUICK STATS & ACHIEVEMENTS
+           -------------------------------------------------- */
+        .stats-stripe {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 3.5rem 0;
+        }
+
+        .stats-flex-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-metric-number {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            color: var(--accent-aqua);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-metric-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* --------------------------------------------------
+           SECTION 4: PLATFORM OVERVIEW & EDITORIAL MISSION
+           -------------------------------------------------- */
+        .overview-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-text-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            padding: 3.5rem;
+            position: relative;
+        }
+
+        .overview-text-panel::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent-aqua);
+        }
+
+        /* --------------------------------------------------
+           SECTION 5: MAIN FEATURED ARTICLE SECTION
+           -------------------------------------------------- */
+        .article-journal-section {
+            background: var(--bg-surface);
+            position: relative;
+        }
+
+        .article-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-aqua);
+            padding: 5rem;
+            box-shadow: var(--shadow-float);
+        }
+
+        .article-header {
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-headline {
+            font-size: 3rem;
+            color: var(--text-heading);
+            margin-top: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .article-byline {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            display: flex;
+            gap: 2rem;
+        }
+
+        .article-body p {
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            color: var(--text-body);
+            line-height: 1.9;
+        }
+
+        .article-body h3 {
+            font-size: 2rem;
+            color: var(--accent-aqua);
+            margin: 3rem 0 1.5rem 0;
+        }
+
+        .article-callout-quote {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--text-heading);
+        }
+
+        /* SEO Anchors Styling */
+        .seo-backlink-primary {
+            color: var(--accent-aqua);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: var(--accent-gold);
+            transition: var(--transition-swift);
+        }
+
+        .seo-backlink-primary:hover {
+            color: #fff;
+            background: var(--accent-teal);
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+        }
+
+        .authority-external-link {
+            color: var(--accent-gold);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: var(--transition-swift);
+        }
+
+        .authority-external-link:hover {
+            color: var(--text-heading);
+        }
+
+        /* --------------------------------------------------
+           SECTION 6: CORE FEATURES & KEY VALUE GRID
+           -------------------------------------------------- */
+        .value-grid-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .value-card-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            padding: 2.5rem 2rem;
+            transition: var(--transition-swift);
+        }
+
+        .value-card-item:hover {
+            border-color: var(--accent-aqua);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .value-card-number {
+            font-family: var(--font-mono);
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --------------------------------------------------
+           SECTION 7: STEP-BY-STEP ARCHITECTURE GUIDE
+           -------------------------------------------------- */
+        .process-steps-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .step-node {
+            background: var(--bg-card);
+            border-top: 3px solid var(--accent-aqua);
+            padding: 2rem 1.5rem;
+        }
+
+        .step-node-num {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-aqua);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --------------------------------------------------
+           SECTION 8: COMPREHENSIVE COMPARISON TABLE
+           -------------------------------------------------- */
+        .comparison-table-shell {
+            margin-top: 3.5rem;
+            overflow-x: auto;
+            border: 1px solid var(--border-aqua);
+        }
+
+        .data-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-surface);
+            text-align: left;
+        }
+
+        .data-matrix th, .data-matrix td {
+            padding: 1.25rem 1.5rem;
+            border: 1px solid var(--border-glass);
+        }
+
+        .data-matrix th {
+            background: rgba(6, 35, 30, 0.9);
+            font-family: var(--font-mono);
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* --------------------------------------------------
+           SECTION 9: INTERACTIVE FAQ SECTION
+           -------------------------------------------------- */
+        .faq-list-container {
+            max-width: 850px;
+            margin: 3.5rem auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .faq-item-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            transition: var(--transition-swift);
+        }
+
+        .faq-toggle-btn {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: none;
+            border: none;
+            color: var(--text-heading);
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-icon {
+            font-family: var(--font-mono);
+            color: var(--accent-aqua);
+            font-size: 1.4rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-body-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 2rem;
+            color: var(--text-body);
+        }
+
+        .faq-item-card.open .faq-body-panel {
+            max-height: 250px;
+            padding: 0 2rem 1.8rem 2rem;
+        }
+
+        .faq-item-card.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* --------------------------------------------------
+           SECTION 10: EXPERT TIPS & BEST PRACTICES
+           -------------------------------------------------- */
+        .tips-tri-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .tip-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            padding: 2.5rem 1.8rem;
+            position: relative;
+        }
+
+        .tip-box-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent-teal);
+            color: var(--text-heading);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* --------------------------------------------------
+           SECTION 11: USER FEEDBACK & TESTIMONIALS
+           -------------------------------------------------- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .review-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            padding: 2.8rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.8rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-aqua);
+        }
+
+        /* --------------------------------------------------
+           SECTION 12: HIGHLIGHTED RESOURCE BANNER
+           -------------------------------------------------- */
+        .cta-highlight-banner {
+            background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(20, 123, 111, 0.4) 100%);
+            border: 1px solid var(--accent-aqua);
+            padding: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem 0;
+            box-shadow: var(--shadow-float);
+        }
+
+        /* --------------------------------------------------
+           SECTION 13: FUNCTIONAL CONTACT FORM
+           -------------------------------------------------- */
+        .form-shell-card {
+            max-width: 780px;
+            margin: 0 auto;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-aqua);
+            padding: 3.5rem;
+            box-shadow: var(--shadow-float);
+        }
+
+        .form-field {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-glass);
+            color: var(--text-heading);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: var(--transition-swift);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-aqua);
+            box-shadow: 0 0 10px var(--accent-aqua-glow);
+        }
+
+        /* --------------------------------------------------
+           SECTION 14: COMPREHENSIVE FOOTER
+           -------------------------------------------------- */
+        .site-footer {
+            background: #031411;
+            border-top: 1px solid var(--border-aqua);
+            padding: 5rem 0 2.5rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-heading {
+            font-family: var(--font-serif);
+            color: var(--text-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links-list a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-swift);
+        }
+
+        .footer-links-list a:hover {
+            color: var(--accent-aqua);
+        }
+
+        .footer-bottom-bar {
+            border-top: 1px solid var(--border-glass);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design Rules */
+        @media (max-width: 1024px) {
+            .hero-asym-grid, .overview-split, .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-flex-grid, .value-grid-3col, .process-steps-row, .tips-tri-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cta-highlight-banner {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .stats-flex-grid, .value-grid-3col, .process-steps-row, .tips-tri-layout {
+                grid-template-columns: 1fr;
+            }
+            .article-container {
+                padding: 2.5rem 1.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1: MODERN STICKY NAVIGATION BAR -->
+    <header class="header-nav">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-identity">
+                <span class="brand-emerald-dot"></span>
+                Hollytree Tyler Living
+            </a>
+            <ul class="nav-links">
+                <li><a href="#mission" class="nav-item-link">Overview</a></li>
+                <li><a href="#article" class="nav-item-link">Pool Hydrology</a></li>
+                <li><a href="#features" class="nav-item-link">Standards</a></li>
+                <li><a href="#faq" class="nav-item-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-item-link">Audit Request</a></li>
+            </ul>
+            <a href="#contact" class="nav-action-btn">Schedule Inspection</a>
+        </div>
+    </header>
+
+    <!-- SECTION 2: DYNAMIC HERO SECTION -->
+    <section class="hero-banner">
+        <div class="container hero-asym-grid">
+            <div>
+                <span class="editorial-badge">Subterranean Hydrology Journal</span>
+                <h1 class="hero-title">Preserving Aquatic Integrity in <span>Hollytree & Stonebridge</span></h1>
+                <p class="hero-subtitle">An authoritative publication detailing underground pipe dynamics, non-destructive pressure diagnostics, and structural pool preservation across Tyler's premier residential enclaves.</p>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="#article" class="nav-action-btn">Read Featured Journal Article</a>
+                    <a href="#architecture" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-aqua); text-decoration: underline;">Diagnostic Workflow &rarr;</a>
+                </div>
+            </div>
+            <div class="hero-display-card">
+                <div class="hero-card-tag">Acoustic Pressure Mapping</div>
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80" alt="Luxury Swimming Pool Architecture" class="hero-display-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: QUICK STATS & ACHIEVEMENTS GRID -->
+    <section class="stats-stripe">
+        <div class="container stats-flex-grid">
+            <div>
+                <div class="stat-metric-number">1/8"</div>
+                <div class="stat-metric-label">Max Normal Daily Evaporation</div>
+            </div>
+            <div>
+                <div class="stat-metric-number">100%</div>
+                <div class="stat-metric-label">Non-Destructive Testing Coverage</div>
+            </div>
+            <div>
+                <div class="stat-metric-number">720+</div>
+                <div class="stat-metric-label">Gallons Lost Daily Per Micro-Split</div>
+            </div>
+            <div>
+                <div class="stat-metric-number">0mm</div>
+                <div class="stat-metric-label">Tolerance for Sub-Deck Soil Washout</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PLATFORM OVERVIEW / EDITORIAL MISSION -->
+    <section id="mission" class="section-padding">
+        <div class="container overview-split">
+            <div class="overview-text-panel">
+                <span class="editorial-badge">Editorial Charter</span>
+                <h2>Protecting Estate Infrastructure Through Subsurface Precision</h2>
+                <p style="margin-top: 1.2rem; color: var(--text-body);">Hollytree Tyler Living functions as a specialized engineering and lifestyle publication. We bridge the gap between complex geotechnical soil shifts in East Texas and the long-term structural maintenance required for luxury inground swimming facilities.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80" alt="Architectural Pool Detail" style="width: 100%; height: 360px; object-fit: cover; border: 1px solid var(--border-aqua);">
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="custom-divider"></div></div>
+
+    <!-- SECTION 5: MAIN FEATURED ARTICLE SECTION -->
+    <section id="article" class="section-padding article-journal-section">
+        <div class="container">
+            <article class="article-container">
+                <header class="article-header">
+                    <span class="editorial-badge">Geotechnical & Aquatic Engineering</span>
+                    <h1 class="article-headline">Maintaining Inground Pools in Hollytree and Stonebridge</h1>
+                    <div class="article-byline">
+                        <span>Author: Hydro-Tech Editorial Board</span>
+                        <span>Region: Hollytree & Stonebridge, Tyler TX</span>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <p>Residential swimming pools in Tyler neighborhoods like Hollytree and Stonebridge suffer water loss from underground pipe stress and ground movement. The clay-rich soil strata defining these master-planned East Texas communities undergo significant expansion and contraction cycles depending on seasonal rainfall. When heavy winter rains saturate the earth, subterranean clay swells, applying massive lateral pressure to underground pool plumbing networks. As heatwaves dry out the upper soil columns, contraction occurs, causing micro-shifts beneath pool coping, concrete decking, and structural gunite shells.</p>
+
+                    <p>While heat increases surface evaporation, continuous drops in water levels usually point to cracked return lines or skimmer seal failures. During intense East Texas summers, homeowners frequently mistake significant fluid loss for natural atmospheric evaporation. However, a standard pool under normal atmospheric humidity and ambient heat loses no more than an eighth to a quarter of an inch of water daily. Drops exceeding this threshold signal active fluid loss within return jets, main drain lines, suction piping, or skimmer throat seals embedded within the deck masonry.</p>
+
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" alt="Subsurface Pool Plumbing Diagnostic Setup" style="width: 100%; height: 380px; object-fit: cover; border: 1px solid var(--border-aqua); margin: 2.5rem 0;">
+
+                    <h3>Advanced Diagnostic Technologies for Sub-Deck Plumbing</h3>
+
+                    <p>Non-destructive pressure testing pinpoints exact line breaches around pool decks without requiring widespread excavation. Rather than jackhammering expansive travertine or stamped concrete decks based on educated guesses, specialized technicians utilize helium tracing gas and digital acoustic ground microphones. Pressurizing individual plumbing loops with inert gas allows precise acoustic sensors to detect the exact sound signature of escaping air through micro-cracks in subterranean PVC conduits.</p>
+
+                    <div class="article-callout-quote">
+                        "Unchecked subterranean pool leaks wash away load-bearing base soil, converting a minor pipe repair into an extensive deck collapse and shell cracking emergency."
+                    </div>
+
+                    <p>Contracting specialized <a href="https://tylerleakrepairpros.com/services/pool-leak-detection-repair" class="seo-backlink-primary">pool leak detection Tyler</a> stops ongoing water waste and stabilizes pool deck soil. Early intervention prevents chlorinated water from eroding supporting sand and soil foundations beneath surrounding concrete slabs. By maintaining structural soil integrity, homeowners preserve both the cosmetic alignment of their pool coping and the structural warranty of their subterranean shells.</p>
+
+                    <p>Subsurface water management standards are reinforced by national civil engineering data. Technical publications provided by the <a href="https://www.usgs.gov" class="authority-external-link" target="_blank" rel="noopener">United States Geological Survey (USGS)</a> emphasize the volatile swelling mechanics of East Texas clay strata. Furthermore, safety and maintenance guidelines published by the <a href="https://www.phta.org" class="authority-external-link" target="_blank" rel="noopener">Pool & Hot Tub Alliance (PHTA)</a> highlight non-destructive hydro-testing as the standard protocol for preventing major structural foundation destabilization in residential pools.</p>
+
+                    <h3>Sustaining Property Equity and Summer Operational Readiness</h3>
+
+                    <p>Early pool plumbing fixes keep summer facilities operating smoothly. Addressing pipe stress before minor tears expand into major line ruptures ensures filtration pumps, heaters, and salt chlorinators maintain correct hydraulic pressure. Proactive seasonal maintenance safeguards residential estate values while guaranteeing uninterrupted enjoyment for families throughout Hollytree and Stonebridge.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CORE FEATURES & KEY VALUE GRID -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <span class="editorial-badge">Technical Pillars</span>
+            <h2>Sub-Deck Structural Protection Standards</h2>
+            <div class="value-grid-3col">
+                <div class="value-card-item">
+                    <div class="value-card-number">// 01</div>
+                    <h3>Hydrostatic Pressure Isolation</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Isolating skimmer, main drain, and return loops independently to verify pressure retention under load.</p>
+                </div>
+                <div class="value-card-item">
+                    <div class="value-card-number">// 02</div>
+                    <h3>Acoustic Micro-Frequency Tracking</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Using ultra-sensitive ground hydrophones to detect underground fluid discharge beneath decking.</p>
+                </div>
+                <div class="value-card-item">
+                    <div class="value-card-number">// 03</div>
+                    <h3>Helium Trace Spectrometry</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Injecting light inert gas into sealed conduits to trace micro-porosity through concrete decks.</p>
+                </div>
+                <div class="value-card-item">
+                    <div class="value-card-number">// 04</div>
+                    <h3>Skimmer Throat Joint Seals</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Applying high-tensile epoxy compounds where plastic skimmer boxes meet concrete pool shells.</p>
+                </div>
+                <div class="value-card-item">
+                    <div class="value-card-number">// 05</div>
+                    <h3>Coping & Tile Expansion Joints</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Replacing deteriorated mastic seals to prevent deck movement from shearing perimeter pool tiles.</p>
+                </div>
+                <div class="value-card-item">
+                    <div class="value-card-number">// 06</div>
+                    <h3>Sub-Base Soil Stabilization</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.8rem;">Monitoring ground moisture levels around pool perimeters to mitigate clay swell pressures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: STEP-BY-STEP ARCHITECTURE GUIDE -->
+    <section id="architecture" class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <span class="editorial-badge">Diagnostic Workflow</span>
+            <h2>Non-Destructive Inspection Sequence</h2>
+            <div class="process-steps-row">
+                <div class="step-node">
+                    <div class="step-node-num">PHASE A</div>
+                    <h4 style="color: var(--accent-gold);">Evaporation Audit</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Conducting bucket tests to separate atmospheric evaporation from structural leakage.</p>
+                </div>
+                <div class="step-node">
+                    <div class="step-node-num">PHASE B</div>
+                    <h4 style="color: var(--accent-gold);">Loop Isolation</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Plugging all return fittings and skimmer lines to isolate individual pipe conduits.</p>
+                </div>
+                <div class="step-node">
+                    <div class="step-node-num">PHASE C</div>
+                    <h4 style="color: var(--accent-gold);">Acoustic Mapping</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Scanning deck surfaces with ground microphones to locate underground leak noise.</p>
+                </div>
+                <div class="step-node">
+                    <div class="step-node-num">PHASE D</div>
+                    <h4 style="color: var(--accent-gold);">Precision Repair</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Executing surgical deck core repairs or pipe sleeves directly over identified points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: COMPREHENSIVE COMPARISON TABLE -->
+    <section class="section-padding">
+        <div class="container">
+            <span class="editorial-badge">Evaluation Matrix</span>
+            <h2>Traditional Excavation vs. Non-Destructive Leak Detection</h2>
+            <div class="comparison-table-shell">
+                <table class="data-matrix">
+                    <thead>
+                        <tr>
+                            <th>Evaluation Parameter</th>
+                            <th>Traditional Trenching Methods</th>
+                            <th>Acoustic & Gas Non-Destructive Protocol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Deck Impact</strong></td>
+                            <td>Widespread demolition of travertine or pavers</td>
+                            <td>Zero deck damage during localization phase</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diagnostic Accuracy</strong></td>
+                            <td>Approximating leakage based on damp soil</td>
+                            <td>Pinpoint accuracy within inches of pipe break</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property Disruption</strong></td>
+                            <td>Heavy heavy machinery and multi-day noise</td>
+                            <td>Clean, quiet electronic testing within hours</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Overall Cost Efficiency</strong></td>
+                            <td>High deck restoration and concrete replacement costs</td>
+                            <td>Minimizes structural repairs to direct target zone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: INTERACTIVE FAQ SECTION -->
+    <section id="faq" class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span class="editorial-badge">Technical Clarifications</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list-container">
+                <div class="faq-item-card">
+                    <button class="faq-toggle-btn">
+                        <span>How can I distinguish pool leaks from normal evaporation in Tyler?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-body-panel">
+                        <p>Perform a 24-hour bucket test. Fill a bucket with pool water and set it on the pool steps, matching water levels inside and outside the bucket. If the pool water level drops significantly lower than the bucket level, a leak is present.</p>
+                    </div>
+                </div>
+                <div class="faq-item-card">
+                    <button class="faq-toggle-btn">
+                        <span>Why are Hollytree and Stonebridge pools particularly vulnerable?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-body-panel">
+                        <p>These developments rest on heavy clay soil strata that experience pronounced expansion when wet and deep shrinkage during hot dry spells, exerting shear stress on buried PVC lines.</p>
+                    </div>
+                </div>
+                <div class="faq-item-card">
+                    <button class="faq-toggle-btn">
+                        <span>Will non-destructive testing ruin my custom pool deck?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-body-panel">
+                        <p>No. Acoustic hydrophones and helium tracer gas scan through concrete decking from the surface without requiring drilling or jackhammering until the exact leak point is confirmed.</p>
+                    </div>
+                </div>
+                <div class="faq-item-card">
+                    <button class="faq-toggle-btn">
+                        <span>What happens if an underground pool leak is left unaddressed?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-body-panel">
+                        <p>Escaping water erodes supporting soil beneath pool decks and gunite shells, leading to cracked deck slabs, shifting pool structures, elevated chemical costs, and pump motor burnout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: EXPERT TIPS & BEST PRACTICES -->
+    <section class="section-padding">
+        <div class="container">
+            <span class="editorial-badge">Owner Directives</span>
+            <h2>Proactive Estate Pool Care Tips</h2>
+            <div class="tips-tri-layout">
+                <div class="tip-box">
+                    <span class="tip-box-tag">CRITICAL</span>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.8rem;">Maintain Expansion Joint Mastic</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Ensure the flexible mastic seal between pool coping and deck remains intact to block water intrusion into soil.</p>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-box-tag">SEASONAL</span>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.8rem;">Monitor Equipment Pad Pressure</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">A sudden drop in filter gauge pressure often indicates air introduction from a leaking suction line.</p>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-box-tag">ROUTINE</span>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.8rem;">Inspect Skimmer Throat Plastic</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Check for hair-line cracks inside skimmer throats, where plastic boxes bond to concrete pool shells.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: USER FEEDBACK & TESTIMONIALS -->
+    <section class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <span class="editorial-badge">Estate Owner Case Notes</span>
+            <h2>Resident Testimonials</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p style="font-style: italic;">"Our pool was losing two inches of water a day in Hollytree. Non-destructive pressure testing identified a cracked return fitting right under our stamped deck without damaging surrounding pavers."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Homeowner Portrait" class="author-avatar">
+                        <div>
+                            <strong style="color: var(--accent-aqua); display: block;">Harrison Vance</strong>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">Hollytree Estate Resident</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p style="font-style: italic;">"The technical clarity provided by Hollytree Tyler Living helped us catch a subtle skimmer seal leak in Stonebridge before our pool deck started settling."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Homeowner Portrait" class="author-avatar">
+                        <div>
+                            <strong style="color: var(--accent-aqua); display: block;">Claire Sterling</strong>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">Stonebridge Resident</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: HIGHLIGHTED RESOURCE BANNER -->
+    <section class="container">
+        <div class="cta-highlight-banner">
+            <div>
+                <span class="editorial-badge" style="background: rgba(255,255,255,0.08);">Immediate Pool Diagnostic Assistance</span>
+                <h2 style="font-size: 2.2rem; color: #fff; margin-top: 0.5rem;">Suspect Underground Water Loss?</h2>
+                <p style="color: var(--text-body); margin-top: 0.4rem;">Schedule non-destructive pressure testing and acoustic localization across Tyler, TX.</p>
+            </div>
+            <a href="#contact" class="nav-action-btn">Request Field Diagnostic</a>
+        </div>
+    </section>
+
+    <!-- SECTION 13: FUNCTIONAL CONSULTATION FORM -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="form-shell-card">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <span class="editorial-badge">Diagnostic Booking</span>
+                    <h2>Schedule a Subsurface Pool Inspection</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">Submit your details to connect with specialized pool leak detection professionals in Tyler.</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Diagnostic consultation request received. A specialist will reach out shortly.');">
+                    <div class="form-field">
+                        <label class="form-label" for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-input" placeholder="e.g. Sterling Hayes" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="emailAddr">Email Address</label>
+                        <input type="email" id="emailAddr" class="form-input" placeholder="e.g. s.hayes@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="neighborhood">Subdivision / Neighborhood</label>
+                        <input type="text" id="neighborhood" class="form-input" placeholder="e.g. Hollytree / Stonebridge" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="poolDetails">Observed Pool Behavior</label>
+                        <textarea id="poolDetails" class="form-textarea" rows="4" placeholder="Detail daily water loss level, pump pressure fluctuations, or deck moisture..." required></textarea>
+                    </div>
+                    <button type="submit" class="nav-action-btn" style="width: 100%; border: none; cursor: pointer;">Submit Diagnostic Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 14: COMPREHENSIVE FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="brand-identity" style="margin-bottom: 1rem;">
+                        <span class="brand-emerald-dot"></span>
+                        Hollytree Tyler Living
+                    </a>
+                    <p style="margin-top: 1rem; max-width: 380px;">An independent Web 2.0 technical publication dedicated to luxury pool care, geotechnical hydrology, and structural estate preservation in Tyler, Texas.</p>
+                </div>
+                <div>
+                    <div class="footer-heading">Tyler Communities</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Hollytree Golf Club Estates</a></li>
+                        <li><a href="#">Stonebridge Enclave</a></li>
+                        <li><a href="#">Cascades Estates</a></li>
+                        <li><a href="#">Azalea Historic District</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Journal Topics</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#article">Subsurface Hydrology</a></li>
+                        <li><a href="#features">Technical Pillars</a></li>
+                        <li><a href="#architecture">Pressure Mapping</a></li>
+                        <li><a href="#faq">Resident FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Editorial Standards</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Privacy Protocol</a></li>
+                        <li><a href="#">Terms of Publication</a></li>
+                        <li><a href="#">Engineering References</a></li>
+                        <li><a href="#contact">Direct Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <div>&copy; 2026 Hollytree Tyler Living (hollytreetylerliving). All rights reserved.</div>
+                <div>Aquatic & Geotechnical Journal Portal</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE ACCORDION SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle-btn');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const parentCard = this.parentElement;
+                    const isOpen = parentCard.classList.contains('open');
+                    
+                    document.querySelectorAll('.faq-item-card').forEach(card => {
+                        card.classList.remove('open');
+                    });
+                    
+                    if (!isOpen) {
+                        parentCard.classList.add('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
